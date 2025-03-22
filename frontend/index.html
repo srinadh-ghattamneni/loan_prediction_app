@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Predictor</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+    <h2>Loan Approval Predictor</h2>
+    
+    <label>Age: </label><input type="number" id="age"><br>
+    <label>Gender (0=Male, 1=Female): </label><input type="number" id="gender"><br>
+    <label>Education (0=High School, 1=Bachelor, 2=Master): </label><input type="number" id="education"><br>
+    <label>Annual Income: </label><input type="number" id="annual-income"><br>
+    <label>Employment Experience (Years): </label><input type="number" id="experience"><br>
+    <label>Home Ownership (0=Rent, 1=Own, 2=Mortgage): </label><input type="number" id="home-ownership"><br>
+    <label>Loan Amount: </label><input type="number" id="loan-amount"><br>
+    <label>Loan Intent (0=Personal, 1=Education, 2=Medical, etc.): </label><input type="number" id="loan-intent"><br>
+    <label>Interest Rate (%): </label><input type="number" id="interest-rate"><br>
+    <label>Loan Percent Income: </label><input type="number" id="loan-percent-income"><br>
+    <label>Credit History Length (Years): </label><input type="number" id="credit-history"><br>
+    <label>Credit Score: </label><input type="number" id="credit-score"><br>
+    <label>Previous Defaults (0=No, 1=Yes): </label><input type="number" id="previous-defaults"><br>
+    
+    <button id="predict-btn">Check Loan Approval</button>
+    
+    <script src="static/script.js"></script>
+</body>
+</html>
