@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Approval Predictor</title>
-    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
+
 </head>
 <body>
     <h2>Loan Approval Predictor</h2>
@@ -24,6 +25,8 @@
     <label>Previous Defaults (0=No, 1=Yes): </label><input type="number" id="previous-defaults"><br>
     
     <button id="predict-btn">Check Loan Approval</button>
+    <!-- Display prediction result here -->
+<div id="result" style="margin-top: 10px; font-weight: bold;font-size: 3rem;"></div>
     
     <script src="static/script.js"></script>
 </body>

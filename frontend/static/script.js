@@ -32,15 +32,25 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             console.log("Response received:", data);
+            let resultDiv = document.getElementById("result");
             if (data.loan_approved !== undefined) {
-                alert("Loan Approval Status: " + (data.loan_approved ? "Approved ✅" : "Rejected ❌"));
+                if (data.loan_approved) {
+                    resultDiv.innerHTML = "✅ Loan Approved!";
+                    resultDiv.style.color = "green";
+                } else {
+                    resultDiv.innerHTML = "❌ Loan Rejected!";
+                    resultDiv.style.color = "red";
+                }
             } else {
-                alert("Error: " + data.error);
+                resultDiv.innerHTML = "⚠️ Error: " + data.error;
+                resultDiv.style.color = "orange";
             }
         })
         .catch(error => {
             console.error("Error:", error);
-            alert("Something went wrong. Check the console for details.");
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "⚠️ Something went wrong. Check the console for details.";
+            resultDiv.style.color = "red";
         });
     });
 });
